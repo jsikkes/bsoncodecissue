@@ -1,0 +1,27 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group 'com.sikkes.bsoncodecissue'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = JavaVersion.VERSION_1_8
+mainClassName = 'com.sikkes.bsoncodecissue.App'
+
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+    implementation group: 'org.mongodb', name: 'bson', version: '3.12.5'
+    implementation group: 'org.mongodb', name: 'mongo-java-driver', version: '3.12.5'
+
+    testImplementation group: 'junit', name: 'junit', version: '4.12'
+}
+
+wrapper {
+    gradleVersion = '6.3'
+}
